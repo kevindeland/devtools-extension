@@ -16,3 +16,7 @@ document.querySelector('#insertmessagebutton').addEventListener('click', functio
     sendObjectToInspectedPage({action: "code", content: "document.body.innerHTML='<button>Send message to DevTools</button>'"});
     sendObjectToInspectedPage({action: "script", content: "messageback-script.js"});
 }, false);
+
+document.querySelector('#garbage').addEventListener('click', function() {
+  sendObjectToInspectedPage({action: "script", content: "garbage-script.js"});
+}, false);

@@ -7,6 +7,8 @@
 
 chrome.extension.onConnect.addListener(function (port) {
 
+  console.log(port);
+
     var extensionListener = function (message, sender, sendResponse) {
 
         if(message.tabId && message.content) {
